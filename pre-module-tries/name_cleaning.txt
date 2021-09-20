@@ -1,0 +1,15 @@
+stu_names = students_df.student_name.tolist()
+x = []
+
+caps = list('abcdefghijklmnopqrstuvwxyz'.upper())
+for name in stu_names:
+    if 'Dr.' in name:
+        x.append(stu_names.index(name))
+    elif name[-1] in caps and name[-1] != 'I':
+        x.append(stu_names.index(name))
+
+effed_names = []
+for num in x:
+    # stu_names[num]
+    effed_names.append(stu_names[num])
+print(len(effed_names))
